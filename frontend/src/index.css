@@ -138,3 +138,79 @@ body {
   background: #9aa5b1;
   cursor: not-allowed;
 }
+
+/* Grid de resultados */
+.tabela {
+  max-height: 70vh;
+  margin-top: 24px;
+  overflow: auto;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.tabela:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+.tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.tabela thead th,
+.tabela thead td {
+  position: sticky;
+  z-index: 1;
+  padding: 6px 12px;
+  background: var(--cor-primaria);
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tabela thead tr:first-child > * {
+  top: 0;
+  height: 30px;
+  border-bottom: 1px solid rgb(255 255 255 / 30%);
+}
+
+.tabela thead tr:last-child th {
+  top: 30px;
+}
+
+.tabela thead th + th {
+  border-left: 1px solid rgb(255 255 255 / 30%);
+}
+
+.tabela tbody th,
+.tabela tbody td {
+  padding: 6px 12px;
+  border-bottom: 1px solid #e4e7eb;
+  text-align: right;
+}
+
+.tabela tbody th {
+  font-weight: 400;
+  text-align: center;
+}
+
+.tabela tbody td:nth-child(4) {
+  text-align: left;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background: #f5f7fa;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

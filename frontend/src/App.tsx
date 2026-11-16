@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FormularioEmprestimo } from './components/FormularioEmprestimo';
+import { TabelaResultados } from './components/TabelaResultados';
 import { calcularEmprestimo, ErroCalculo } from './services/calculadoraApi';
 import type { DadosEmprestimo, LinhaCalculo } from './types';
 
@@ -48,6 +49,7 @@ function App() {
           {erro}
         </p>
       )}
+      {linhas && <TabelaResultados linhas={linhas} />}
     </main>
   );
 }
