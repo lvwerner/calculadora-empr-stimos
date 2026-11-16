@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Gera a grid de cálculo seguindo as fórmulas da planilha "Calculadora_Emprestimos.xlsx".
  * <p>
@@ -26,7 +28,8 @@ import java.util.TreeMap;
  * fracionário não é exata em {@link BigDecimal}). Os valores são arredondados para 2 casas
  * apenas na saída.
  */
-public final class CalculadoraEmprestimo {
+@Service
+public class CalculadoraEmprestimo {
 
     /** Base de dias (célula F2 da planilha). */
     static final double BASE_DIAS = 360d;
